@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+  color: var(--body-color);
+
+  @media (prefers-reduced-motion) {
+    transition: unset !important;
+  }
+}
+
+html, body {
+  background: var(--body-background);
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+p, span, small {
+  color: var(--body-color);
+  font-family: var(--body-font);
+  line-height: 1.75;
+  letter-spacing: 1px;
+}
+
+i {
+  color: var(--body-color);
+}
+
+a {
+  font-weight: 900;
+  color: var(--primary-color);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--primary-color-light);
+  }
+}
+
+button {
+  margin: 1rem 0;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  outline-color: var(--heading-color);
+  border-radius: var(--spacing-nano);
+  color: var(--button-text-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+  cursor: pointer;
+
+  &:disabled {
+    color: hsl(0, 0%, 60%);
+    background-color: hsl(0, 0%, 80%);
+    border: none;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+pre, code, kbd, samp {
+  font-family: var(--monospace-font);
+}
+
+input, textarea {
+  display: block;
+  background: var(--body-background-alternate);
+  padding: var(--spacing-micro) var(--spacing-standard);
+  border: 1px solid hsl(0, 0%, 64%);
+  border-radius: var(--spacing-nano);
+  margin: 1rem 0;
+  width: 100%;
+  outline: none;
+  font-size: var(--spacing-standard);
+  font-weight: 300;
+  font-family: var(--body-font);
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active,
+  &:focus-within {
+    outline: none;
+    color: var(--heading-color);
+    border-color: var(--heading-color);
+  }
+
+  &:invalid {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--danger-color-light);
+  }
+
+  &:focus {
+    outline: none;
+    color: var(--heading-color);
+  }
+}

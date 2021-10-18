@@ -1,0 +1,59 @@
+$desktop-screen: 768px;
+
+:root {
+  --spacing-xxx-large: 3.5rem;
+  --spacing-xx-large: 2rem;
+  --spacing-x-large: 1.75rem;
+  --spacing-large: 1.5rem;
+  --spacing-medium: 1.25rem;
+  --spacing-standard: 1rem;
+  --spacing-milli: 0.75rem;
+  --spacing-micro: 0.5rem;
+  --spacing-nano: 0.25rem;
+  --heading-font: 'Prata', 'Lora', serif;;
+  --body-font: 'Quicksand', 'Raleway', 'Nunito Sans', sans-serif;
+  --monospace-font:  'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'Roboto Mono', monospace;
+  --nav-bar-color: hsl(0, 0%, 84%);
+  --heading-color: hsl(0, 0%, 0%);
+  --body-color: hsl(0, 0%, 24%);
+  --body-background: hsl(0, 0%, 100%);
+  --body-background-alternate: hsl(0, 0%, 88%);
+  --body-background-alternate-2: hsl(0, 0%, 76%);
+  --muted-color:  hsl(0, 0%, 32%);
+  --primary-color: hsl(263, 74%, 48%);
+  --primary-color-light: hsl(263, 74%, 64%);
+  --secondary-color: hsl(315, 100%, 48%);
+  --secondary-color-light: hsl(315, 100%, 64%);
+  --success-color: hsl(171, 100%, 48%);
+  --success-color-light: hsl(171, 100%, 64%);
+  --warning-color: hsl(14, 100%, 48%);
+  --warning-color-light: hsl(14, 100%, 64%);
+  --danger-color: hsl(341, 94%, 48%);
+  --danger-color-light: hsl(341, 94%, 64%);
+  --button-text-color: hsl(0, 0%, 100%);
+  --shadow: hsla(0, 0%, 0%, .16);
+  --fallback: hsla(0, 0%, 0%, .48);
+
+  @media (prefers-color-scheme: dark) {
+    --nav-bar-color: hsl(0, 0%, 16%);
+    --heading-color: hsl(0, 0%, 100%);
+    --body-color: hsl(0, 0%, 76%);
+    --body-background: hsl(0, 0%, 8%);
+    --body-background-alternate: hsl(0, 0%, 12%);
+    --body-background-alternate-2: hsl(0, 0%, 24%);
+    --muted-color:  hsl(0, 0%, 68%);
+    --primary-color: hsl(263, 74%, 60%);
+    --primary-color-light: hsl(263, 74%, 72%);
+    --secondary-color: hsl(315, 100%, 60%);
+    --secondary-color-light: hsl(315, 100%, 72%);
+    --success-color: hsl(171, 100%, 60%);
+    --success-color-light: hsl(171, 100%, 72%);
+    --warning-color: hsl(14, 100%, 60%);
+    --warning-color-light: hsl(14, 100%, 72%);
+    --danger-color: hsl(341, 94%, 60%);
+    --danger-color-light: hsl(341, 94%, 72%);
+    --button-text-color: hsl(0, 0%, 100%);
+    --shadow: hsla(0, 0%, 0%, .16);
+    --fallback: hsla(0, 0%, 0%, .48);
+  }
+}
