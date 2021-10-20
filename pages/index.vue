@@ -1,58 +1,66 @@
 <template>
-  <div class="index-page">
-    <h1>Hello world</h1>
+  <section class="index-page">
+    <h1>Hello World, From PDF Compressor</h1>
+    <p>Something great is about to come!</p>
+    <hr />
     <p>
-      This is an Awesome template by
-      <a href="https://www.linkedin.com/in/tuhinkarmakar3882/" target="_blank">
-        Tuhin Karmakar
-      </a>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+      animi atque aut consequuntur, corporis debitis deleniti dolores eos et
+      exercitationem illum labore natus neque odio optio perferendis rerum
+      similique ullam.
     </p>
-
-    <section>
-      <button v-ripple class="primary-button">Click Me</button>
-      <button v-ripple class="secondary-button">Click Me</button>
-      <button v-ripple class="success-button">Click Me</button>
-      <button v-ripple class="warning-button">Click Me</button>
-      <button v-ripple class="danger-button">Click Me</button>
-      <button v-ripple disabled>Click Me</button>
-      <button v-ripple class="primary-button-outlined">Click Me</button>
-      <button v-ripple class="secondary-button-outlined">Click Me</button>
-      <button v-ripple class="success-button-outlined">Click Me</button>
-      <button v-ripple class="warning-button-outlined">Click Me</button>
-      <button v-ripple class="danger-button-outlined">Click Me</button>
-    </section>
-  </div>
+    <p>
+      <span
+        >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+        blanditiis, dolore dolores dolorum eligendi eveniet officiis quaerat
+        tempore voluptatibus. A ab at atque harum laborum odio omnis veritatis!
+        Maxime, quis!</span
+      ><span
+        >Accusamus accusantium aperiam architecto asperiores corporis dolorem
+        eius eos id labore libero magni maiores natus neque nisi porro
+        reiciendis rem repellendus, repudiandae, sit ullam velit veniam vitae!
+        Dolores officia, quae.</span
+      ><span
+        >A adipisci amet asperiores atque minima non quo vero! Amet architecto
+        at autem blanditiis consequatur ex harum, impedit maiores molestias
+        numquam officia quis, quod recusandae sunt unde vel velit? At.</span
+      >
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+      animi atque aut consequuntur, corporis debitis deleniti dolores eos et
+      exercitationem illum labore natus neque odio optio perferendis rerum
+      similique ullam.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+      animi atque aut consequuntur, corporis debitis deleniti dolores eos et
+      exercitationem illum labore natus neque odio optio perferendis rerum
+      similique ullam.
+    </p>
+  </section>
 </template>
 
 <script>
-import { jsPDF } from 'jspdf'
-
 export default {
-  components: {},
-
   data() {
-    return {}
-  },
-
-  watch: {},
-
-  mounted() {
-    function downloadPdf() {
-      const pdfDocument = new jsPDF()
-      const filename = '{{ file_name }}'
-      if (pdfDocument !== null) {
-        pdfDocument.save(filename)
-      }
+    return {
+      pageTitle: 'Compress Your PDF - The Best Way',
     }
   },
 
-  methods: {},
+  head() {
+    return {
+      title: this.pageTitle,
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .index-page {
-  display: grid;
-  place-items: center;
+  * + * {
+    margin: var(--spacing-standard) 0;
+  }
 }
 </style>

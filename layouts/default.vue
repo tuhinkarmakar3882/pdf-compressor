@@ -22,9 +22,15 @@ export default {
 .default-layout {
   display: grid;
   grid-template-rows: auto 1fr;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
+
   main {
     padding: var(--spacing-standard);
+    max-width: var(--max-accesible-size);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }
 </style>

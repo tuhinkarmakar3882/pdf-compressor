@@ -1,20 +1,11 @@
 {
   "name": "pdf-compressor",
-  "appName": "PDF Compressor",
+  "appName": "Pack-PDF",
+  "description": "An opensource version of PDF compressor",
   "version": "1.0.0",
   "port": "3000",
-  "keywords": [
-    "PDF Compressor",
-    "Productivity",
-    "PDF Utility"
-  ],
-  "categories": [
-    "Productivity",
-    "Utility",
-    "Tools"
-  ],
-  "themeColor": "#222B29",
-  "backgroundColor": "#111",
+  "host": "0.0.0.0",
+  "themeColor": "#F500B8",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -26,13 +17,8 @@
     "lint": "yarn lint:style --fix && yarn lint:js"
   },
   "dependencies": {
-    "jspdf": "^2.4.0",
-    "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.18.2",
-    "dayjs": "^1.10.6",
-    "firebase": "^9.1.1",
-    "nuxt": "^2.14.5",
-    "nuxt-lazy-load": "^1.2.7"
+    "nuxt": "^2.14.5"
   },
   "devDependencies": {
     "@nuxt/types": "~2.15.0",
@@ -46,8 +32,6 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "fibers": "^5.0.0",
-    "nuxt-compress": "^5.0.0",
-    "nuxt-purgecss": "^1.0.0",
     "prettier": "^2.4.1",
     "sass": "^1.42.1",
     "sass-loader": "10",

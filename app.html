@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
-  <head {{ HEAD_ATTRS }}>
-    <link crossorigin="anonymous" href="https://cdn.materialdesignicons.com/" rel="dns-prefetch">
-    <link crossorigin="anonymous" href="https://cdn.materialdesignicons.com/" rel="preconnect">
-    <link crossorigin="anonymous" href="https://fonts.gstatic.com/" rel="dns-prefetch">
-    <link crossorigin="anonymous" href="https://fonts.gstatic.com/" rel="preconnect">
-    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
+<head {{ HEAD_ATTRS }}>
+  <link crossorigin href="https://cdn.materialdesignicons.com/" rel="dns-prefetch">
+  <link crossorigin href="https://fonts.gstatic.com/" rel="dns-prefetch">
+  <link crossorigin href="https://fonts.googleapis.com/" rel="dns-prefetch">
+
+  <link crossorigin href="https://cdn.materialdesignicons.com/" rel="preconnect">
+  <link crossorigin href="https://fonts.googleapis.com/" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com/" rel="preconnect">
+
+  <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
         media="print" onload="this.media='all'" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Quicksand:wght@300;400&display=swap"
-           rel="stylesheet">
-    {{ HEAD }}
-  </head>
-  <body {{ BODY_ATTRS }}>
-    {{ APP }}
-  </body>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Roboto:wght@300;400&display=swap"
+    media="print" onload="this.media='all'" rel="stylesheet">
+
+  <title>PDF Compressor by Tuhin</title>
+  <meta content="An opensource version of PDF compressor" name="description">
+  {{ HEAD }}
+</head>
+<body class="light-theme" {{ BODY_ATTRS }}>
+{{ APP }}
+</body>
 </html>
