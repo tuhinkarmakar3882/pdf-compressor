@@ -1,22 +1,77 @@
 <template>
   <div class="nav-bar-component">
-    <i v-ripple class="mdi mdi-menu mdi-24px" />
-    <h1>{{ appName }}</h1>
+    <nuxt-link v-slot="{ navigate }" to="/" custom v-ripple>
+      <h1 @click="navigate">{{ appName }}</h1>
+    </nuxt-link>
 
-    <a href="https://www.linkedin.com/in/tuhinkarmakar3882/" target="_blank">
-      <i class="mdi mdi-linkedin mdi-36px" />
-    </a>
+    <aside>
+      <i :class="getThemeIcon" class="mdi mdi-36px" @click="changeTheme" />
+
+      <a href="https://www.linkedin.com/in/tuhinkarmakar3882/" target="_blank">
+        <i class="mdi mdi-linkedin mdi-36px" />
+      </a>
+    </aside>
   </div>
 </template>
 
 <script>
 import * as packageJSON from '~/package.json'
+
 export default {
   name: 'Navbar',
+
   data() {
     return {
       appName: packageJSON.appName,
+      currentTheme: 'light',
     }
+  },
+
+  computed: {
+    getThemeIcon() {
+      if (this.currentTheme === 'light') return 'mdi-weather-night '
+      return 'mdi-white-balance-sunny '
+    },
+  },
+
+  mounted() {
+    this.checkForColorPreference()
+  },
+  methods: {
+    updateColorPreference(theme) {
+      localStorage.setItem('theme', theme)
+      this.currentTheme = theme
+    },
+
+    checkForColorPreference() {
+      const preferredTheme = localStorage.getItem('theme')
+
+      switch (preferredTheme) {
+        case 'light':
+          document.body.classList.add('light-theme')
+          document.body.classList.remove('dark-theme')
+          this.currentTheme = 'light'
+          break
+        case 'dark':
+          document.body.classList.remove('light-theme')
+          document.body.classList.add('dark-theme')
+          this.currentTheme = 'dark'
+          break
+        default:
+          console.log('No Preferred Theme Found.')
+      }
+    },
+    changeTheme() {
+      if (document.body.classList.contains('light-theme')) {
+        document.body.classList.remove('light-theme')
+        document.body.classList.add('dark-theme')
+        this.updateColorPreference('dark')
+      } else {
+        document.body.classList.add('light-theme')
+        document.body.classList.remove('dark-theme')
+        this.updateColorPreference('light')
+      }
+    },
   },
 }
 </script>
@@ -30,28 +85,36 @@ export default {
   justify-content: space-between;
   align-items: center;
   background: var(--nav-bar-color);
-  height: var(--spacing-large);
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  height: var(--top-nav-size);
+  padding-left: var(--spacing-milli);
 
   h1 {
-    font-family: monospace;
+    font-family: var(--brand-icon-font);
     margin: 0 auto 0 0;
+    font-size: var(--spacing-large);
+    line-height: 1;
+    height: var(--top-nav-size);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
+
+  aside {
+    display: flex;
+    align-items: center;
   }
 
   a {
+    all: unset;
     text-decoration: none;
   }
 
   i {
-    height: var(--spacing-large);
-    width: var(--spacing-large);
+    height: var(--top-nav-size);
+    width: var(--top-nav-size);
     display: grid;
     place-items: center;
+    cursor: pointer;
 
     &:last-child {
       margin-left: var(--spacing-micro);
