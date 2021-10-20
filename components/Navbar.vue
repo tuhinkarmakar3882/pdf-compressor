@@ -5,10 +5,15 @@
     </nuxt-link>
 
     <aside>
-      <i :class="getThemeIcon" class="mdi mdi-36px" @click="changeTheme" />
+      <i
+        :class="getThemeIcon"
+        class="mdi mdi-36px"
+        @click="changeTheme"
+        v-ripple
+      />
 
       <a href="https://www.linkedin.com/in/tuhinkarmakar3882/" target="_blank">
-        <i class="mdi mdi-linkedin mdi-36px" />
+        <i class="mdi mdi-linkedin mdi-36px" v-ripple />
       </a>
     </aside>
   </div>
