@@ -1,0 +1,43 @@
+body.light-theme {
+  --nav-bar-color: hsl(0, 0%, 92%);
+  --nav-bar-color-semi-transparent: hsla(0, 0%, 92%, .8);
+  --heading-text-color: hsl(0, 0%, 0%);
+  --paragraph-color: hsl(0, 0%, 16%);
+  --body-background: hsl(0, 0%, 100%);
+  --body-background-alternate: hsl(0, 0%, 88%);
+  --body-background-alternate-2: hsl(0, 0%, 76%);
+  --muted-color: hsl(0, 0%, 32%);
+  --active-tab-color: hsl(355, 92%, 100%);
+  --active-tab-background: hsl(355, 60%, 44%);
+  --inactive-tab-background: hsl(0, 0%, 40%);
+  --primary-color: hsl(355, 60%, 48%);
+  --primary-color-light: hsl(355, 60%, 64%);
+  --primary-button-text-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(87, 60%, 40%);
+  --secondary-color-light: hsl(87, 60%, 68%);
+  --secondary-button-text-color: hsl(0, 0%, 100%);
+  --default-button-text-color: hsl(0, 0%, 100%);
+  --default-button-background-color: hsl(0, 0%, 0%);
+}
+
+body.dark-theme {
+  --nav-bar-color: hsl(0, 0%, 8%);
+  --nav-bar-color-semi-transparent: hsla(0, 0%, 5%, .7);
+  --heading-text-color: hsl(0, 0%, 100%);
+  --paragraph-color: hsl(0, 0%, 85%);
+  --inactive-tab-background: hsl(0, 0%, 52%);
+  --primary-color: hsl(355, 60%, 48%);
+  --primary-color-light: hsl(355, 60%, 64%);
+  --primary-button-text-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(87, 84%, 64%);
+  --secondary-color-light: hsl(87, 84%, 72%);
+  --secondary-button-text-color: hsl(0, 0%, 0%);
+  --active-tab-color: hsl(355, 93%, 68%);
+  --active-tab-background: hsl(0, 0%, 12%);
+  --body-background: hsl(0, 0%, 4%);
+  --body-background-alternate: hsl(0, 0%, 10%);
+  --body-background-alternate-2: hsl(0, 0%, 16%);
+  --muted-color: hsl(0, 0%, 60%);
+  --default-button-text-color: hsl(0, 0%, 0%);
+  --default-button-background-color: hsl(0, 0%, 100%);
+}
